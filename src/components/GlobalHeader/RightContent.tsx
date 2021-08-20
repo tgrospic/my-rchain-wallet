@@ -13,13 +13,13 @@ const { Text } = Typography;
 const GlobalHeaderRight: FC = () => {
   const dispatch = useDispatch(),
     { global, settings } = useSelector<ConnectState, ConnectState>(state => state),
-    { navTheme: theme, layout } = settings,
+    // { navTheme: theme, layout } = settings,
     { networkList, network } = global;
   let className = styles.right;
 
-  if (theme === 'dark' && layout === 'topmenu') {
-    className = `${styles.right}  ${styles.dark}`;
-  }
+  // if (theme === 'dark' && layout === 'topmenu') {
+  //   className = `${styles.right}  ${styles.dark}`;
+  // }
   const changeNetwork = (network: string) => {
     dispatch({
       type: 'global/changeNetwork',

@@ -121,6 +121,7 @@ export default {
     basePath: '/',
   },
   chainWebpack: webpackPlugin,
+  publicPath: './',
   /*
   proxy: {
     '/server/api/': {

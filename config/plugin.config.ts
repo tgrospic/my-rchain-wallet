@@ -51,9 +51,9 @@ export default (config: any) => {
   config.plugin('extract-css').use(require('mini-css-extract-plugin'), [
     {
       filename: `[name].css`,
-      chunkFilename: `[name].[contenthash:8].chunk.css`,
+      chunkFilename: `[name].[hash:8].chunk.css`,
     },
   ]);
   //js的修改
-  config.output.filename('[name].[contenthash:8].js');
+  config.output.filename('[name].[hash:8].js');
 };
